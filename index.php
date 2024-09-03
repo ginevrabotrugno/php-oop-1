@@ -21,13 +21,13 @@ require_once __DIR__ . '/data/db.php';
     <div class="movie-list">
         <?php foreach ($movies as $movie): ?>
             <div class="movie-card">
-                <h2 class="movie-title"><?php echo htmlspecialchars($movie->title); ?></h2>
-                <p><strong>Director:</strong> <?php echo htmlspecialchars($movie->director); ?></p>
-                <p><strong>Release Year:</strong> <?php echo htmlspecialchars($movie->releaseYear); ?></p>
+                <h2 class="movie-title"><?php $movie->title ?></h2>
+                <p><strong>Director:</strong> <?php echo $movie->director?></p>
+                <p><strong>Release Year:</strong> <?php echo $movie->releaseYear ?></p>
                 <p><strong>Genres:</strong></p>
                 <ul class="genres-list">
                     <?php foreach ($movie->genres as $genre): ?>
-                        <li><?php echo htmlspecialchars($genre); ?></li>
+                        <li><?php echo $genre ?></li>
                     <?php endforeach; ?>
                 </ul>
             </div>
