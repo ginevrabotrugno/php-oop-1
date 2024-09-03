@@ -11,7 +11,6 @@ $movies = [
     new Movie("Forrest Gump", "Robert Zemeckis", 1994, "Drama/Romance")
 ];
 
-var_dump($movies);
 
 ?>
 
@@ -23,6 +22,14 @@ var_dump($movies);
     <title>Movie List</title>
 </head>
 <body>
+
+<h1>Movies</h1>
+
+    <?php foreach ($movies as $movie): ?>
+        <ul>
+            <li><?php echo htmlspecialchars($movie->getDetails()); ?></li>
+        </ul>
+    <?php endforeach; ?>
 
 
     

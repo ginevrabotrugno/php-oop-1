@@ -13,4 +13,7 @@ class Movie {
         $this->genre = $_genre;
     }
 
+    public function getDetails() {
+        return "Title: $this->title, Director: $this->director, Year: $this->releaseYear, Genre: $this->genre";
+    }
 }
