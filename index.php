@@ -21,8 +21,8 @@ require_once __DIR__ . '/data/db.php';
     <div class="movie-list">
         <?php foreach ($movies as $movie): ?>
             <div class="movie-card">
-                <h2 class="movie-title"><?php $movie->title ?></h2>
-                <p><strong>Director:</strong> <?php echo $movie->director?></p>
+                <h2 class="movie-title"><?php echo $movie->title ?></h2>
+                <p><strong>Director:</strong> <?php echo $movie->director ?></p>
                 <p><strong>Release Year:</strong> <?php echo $movie->releaseYear ?></p>
                 <p><strong>Genres:</strong></p>
                 <ul class="genres-list">
@@ -30,7 +30,7 @@ require_once __DIR__ . '/data/db.php';
                         <li><?php echo $genre ?></li>
                     <?php endforeach; ?>
                 </ul>
-            </div>
+            </div> 
         <?php endforeach; ?>
     </div>
 </div>
